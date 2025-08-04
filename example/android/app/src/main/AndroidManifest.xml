@@ -1,4 +1,13 @@
+
+<!-- Example App AndroidManifest.xml (example/android/app/src/main/AndroidManifest.xml) -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Add these permissions for the example app -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BIND_VPN_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    
     <application
         android:label="dns_manager_example"
         android:name="${applicationName}"

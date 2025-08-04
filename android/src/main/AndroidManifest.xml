@@ -1,3 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.example.dns_manager">
+  
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.BIND_VPN_SERVICE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  
+  <application>
+    <service
+        android:name="com.example.dns_manager.DummyVPNService"
+        android:permission="android.permission.BIND_VPN_SERVICE"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="android.net.VpnService" />
+        </intent-filter>
+    </service>
+  </application>
 </manifest>
